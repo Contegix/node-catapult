@@ -1,10 +1,13 @@
+
+Deploy steps:
+
 ssh wbpr001.va.opower.it
 cd /var/www/catapult.opower.com/
 git fetch
 git merge origin
 sudo /etc/init.d/catapult restart
 
+Watch the logs:
+
 tail -f -n 1000 /var/www/catapult.opower.com/log/catapult.log
 tail -f -n 1000 /var/www/catapult.opower.com/log/catapult.log.1
-
-sudo /etc/init.d/catapult start
